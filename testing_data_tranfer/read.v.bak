@@ -1,0 +1,22 @@
+module read_wbin#(
+parameter sizein=32,
+parameter sizew=8
+)
+(
+input clk,
+input rst,
+
+
+input[7:0] rlayer,//the layer to be read
+input[7:0] rn,//the neuron to be read
+input[7:0] rin,//the input of a neuron
+input rmode,//0: read input, 1: read weight/bias
+input rs,//start
+output reg[sizein-1:0] ram_in,
+output reg[sizew-1:0] ram_w,
+output reg rf//finished
+);
+
+
+endmodule
+

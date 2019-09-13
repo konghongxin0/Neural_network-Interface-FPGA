@@ -1,0 +1,1017 @@
+Analysis & Synthesis report for nn
+Sat Apr 27 16:52:12 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |test|state
+  9. State Machine - |test|connect:cnt0|state
+ 10. State Machine - |test|database:db0|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |test
+ 15. Parameter Settings for User Entity Instance: database:db0
+ 16. Parameter Settings for User Entity Instance: connect:cnt0
+ 17. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_0
+ 18. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_1
+ 19. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_2
+ 20. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_3
+ 21. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_4
+ 22. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_5
+ 23. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_6
+ 24. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_7
+ 25. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_8
+ 26. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_9
+ 27. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_10
+ 28. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_11
+ 29. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_12
+ 30. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_13
+ 31. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_14
+ 32. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_15
+ 33. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_16
+ 34. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_17
+ 35. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_18
+ 36. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_19
+ 37. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_20
+ 38. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_21
+ 39. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_22
+ 40. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_23
+ 41. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_24
+ 42. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_25
+ 43. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_26
+ 44. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_27
+ 45. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_28
+ 46. Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_29
+ 47. Port Connectivity Checks: "connect:cnt0"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Apr 27 16:52:12 2019       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; nn                                          ;
+; Top-level Entity Name           ; test                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 50                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; test               ; nn                 ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; test.v                           ; yes             ; User Verilog HDL File  ; D:/Dropbox/csce614/nn/test.v     ;         ;
+; Neuron.v                         ; yes             ; User Verilog HDL File  ; D:/Dropbox/csce614/nn/Neuron.v   ;         ;
+; database.v                       ; yes             ; User Verilog HDL File  ; D:/Dropbox/csce614/nn/database.v ;         ;
+; cont.v                           ; yes             ; User Verilog HDL File  ; D:/Dropbox/csce614/nn/cont.v     ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 50    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 50    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |test                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 50   ; 0            ; |test               ; test        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |test|state                                                        ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; state.00000011 ; state.00000010 ; state.00000001 ; state.00000000 ;
++----------------+----------------+----------------+----------------+----------------+
+; state.00000000 ; 0              ; 0              ; 0              ; 0              ;
+; state.00000001 ; 0              ; 0              ; 1              ; 1              ;
+; state.00000010 ; 0              ; 1              ; 0              ; 1              ;
+; state.00000011 ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |test|connect:cnt0|state                                                                                                                                                                                                  ;
++---------------+--------------+--------------+-------------+-------------+-------------+--------------+--------------+-------------+--------------+--------------+-------------+---------------+---------------+--------------+------------+
+; Name          ; state.FINISH ; state.RESULT ; state.WAIT1 ; state.TRANS ; state.WAIT0 ; state.LOADB1 ; state.LOADB0 ; state.LOADB ; state.LOADW1 ; state.LOADW0 ; state.LOADW ; state.LOADIN1 ; state.LOADIN0 ; state.LOADIN ; state.IDLE ;
++---------------+--------------+--------------+-------------+-------------+-------------+--------------+--------------+-------------+--------------+--------------+-------------+---------------+---------------+--------------+------------+
+; state.IDLE    ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 0          ;
+; state.LOADIN  ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 1            ; 1          ;
+; state.LOADIN0 ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 1             ; 0            ; 1          ;
+; state.LOADIN1 ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 1             ; 0             ; 0            ; 1          ;
+; state.LOADW   ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 1           ; 0             ; 0             ; 0            ; 1          ;
+; state.LOADW0  ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 1            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.LOADW1  ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 1            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.LOADB   ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 1           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.LOADB0  ; 0            ; 0            ; 0           ; 0           ; 0           ; 0            ; 1            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.LOADB1  ; 0            ; 0            ; 0           ; 0           ; 0           ; 1            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.WAIT0   ; 0            ; 0            ; 0           ; 0           ; 1           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.TRANS   ; 0            ; 0            ; 0           ; 1           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.WAIT1   ; 0            ; 0            ; 1           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.RESULT  ; 0            ; 1            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
+; state.FINISH  ; 1            ; 0            ; 0           ; 0           ; 0           ; 0            ; 0            ; 0           ; 0            ; 0            ; 0           ; 0             ; 0             ; 0            ; 1          ;
++---------------+--------------+--------------+-------------+-------------+-------------+--------------+--------------+-------------+--------------+--------------+-------------+---------------+---------------+--------------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------+
+; State Machine - |test|database:db0|state          ;
++------------+------------+------------+------------+
+; Name       ; state.WAIT ; state.IDLE ; state.READ ;
++------------+------------+------------+------------+
+; state.IDLE ; 0          ; 0          ; 0          ;
+; state.WAIT ; 1          ; 1          ; 0          ;
+; state.READ ; 0          ; 1          ; 1          ;
++------------+------------+------------+------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------+--------------------------------------+
+; Register name                           ; Reason for Removal                   ;
++-----------------------------------------+--------------------------------------+
+; rnum[0..7]                              ; Stuck at GND due to stuck port clock ;
+; rsam[0..7]                              ; Stuck at GND due to stuck port clock ;
+; cstart                                  ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|count[0..7]                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|delay[0..7]                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|rs                         ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|finished                   ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|cw[0..7]                   ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|cn[0..7]                   ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|cl[0..7]                   ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|cin[0..7]                  ; Stuck at GND due to stuck port clock ;
+; database:db0|rf                         ; Stuck at GND due to stuck port clock ;
+; database:db0|state.IDLE                 ; Lost fanout                          ;
+; database:db0|state.READ                 ; Lost fanout                          ;
+; connect:cnt0|state.LOADIN               ; Lost fanout                          ;
+; database:db0|state.WAIT                 ; Lost fanout                          ;
+; state~6                                 ; Lost fanout                          ;
+; state~7                                 ; Lost fanout                          ;
+; state~8                                 ; Lost fanout                          ;
+; state~9                                 ; Lost fanout                          ;
+; state~10                                ; Lost fanout                          ;
+; state~11                                ; Lost fanout                          ;
+; state~12                                ; Lost fanout                          ;
+; state~13                                ; Lost fanout                          ;
+; state.00000000                          ; Stuck at GND due to stuck port clock ;
+; state.00000001                          ; Stuck at GND due to stuck port clock ;
+; state.00000010                          ; Stuck at GND due to stuck port clock ;
+; state.00000011                          ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state~3                    ; Lost fanout                          ;
+; connect:cnt0|state~4                    ; Lost fanout                          ;
+; connect:cnt0|state~5                    ; Lost fanout                          ;
+; connect:cnt0|state~6                    ; Lost fanout                          ;
+; connect:cnt0|state~7                    ; Lost fanout                          ;
+; connect:cnt0|state~8                    ; Lost fanout                          ;
+; connect:cnt0|state~9                    ; Lost fanout                          ;
+; connect:cnt0|state~10                   ; Lost fanout                          ;
+; connect:cnt0|state.IDLE                 ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.FINISH               ; Lost fanout                          ;
+; connect:cnt0|state.LOADIN0              ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADIN1              ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADW                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADW0               ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADW1               ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADB                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADB0               ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.LOADB1               ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.WAIT0                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.TRANS                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.WAIT1                ; Stuck at GND due to stuck port clock ;
+; connect:cnt0|state.RESULT               ; Stuck at GND due to stuck port clock ;
+; database:db0|state~4                    ; Lost fanout                          ;
+; database:db0|state~5                    ; Lost fanout                          ;
+; database:db0|state~6                    ; Lost fanout                          ;
+; database:db0|state~7                    ; Lost fanout                          ;
+; database:db0|state~8                    ; Lost fanout                          ;
+; database:db0|state~9                    ; Lost fanout                          ;
+; Total Number of Removed Registers = 112 ;                                      ;
++-----------------------------------------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------------+
+; Register name              ; Reason for Removal      ; Registers Removed due to This Register                                              ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------------+
+; cstart                     ; Stuck at GND            ; connect:cnt0|finished, connect:cnt0|cw[0], connect:cnt0|cw[1], connect:cnt0|cw[2],  ;
+;                            ; due to stuck port clock ; connect:cnt0|cw[3], connect:cnt0|cw[4], connect:cnt0|cw[5], connect:cnt0|cw[6],     ;
+;                            ;                         ; connect:cnt0|cw[7], connect:cnt0|cn[0], connect:cnt0|cn[1], connect:cnt0|cn[2],     ;
+;                            ;                         ; connect:cnt0|cn[3], connect:cnt0|cn[4], connect:cnt0|cn[5], connect:cnt0|cn[6],     ;
+;                            ;                         ; connect:cnt0|cn[7], connect:cnt0|cl[2], connect:cnt0|cl[3], connect:cnt0|cl[4],     ;
+;                            ;                         ; connect:cnt0|cl[5], connect:cnt0|cl[6], connect:cnt0|cl[7], connect:cnt0|cin[0],    ;
+;                            ;                         ; connect:cnt0|cin[1], connect:cnt0|cin[2], connect:cnt0|cin[3], connect:cnt0|cin[4], ;
+;                            ;                         ; connect:cnt0|cin[5], connect:cnt0|cin[6], connect:cnt0|cin[7]                       ;
+; state.00000000             ; Stuck at GND            ; state.00000001, state.00000010                                                      ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|rs            ; Stuck at GND            ; database:db0|rf                                                                     ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.IDLE    ; Stuck at GND            ; connect:cnt0|state.FINISH                                                           ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.LOADIN0 ; Stuck at GND            ; connect:cnt0|state.LOADIN1                                                          ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.LOADW0  ; Stuck at GND            ; connect:cnt0|state.LOADW1                                                           ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.LOADB0  ; Stuck at GND            ; connect:cnt0|state.LOADB1                                                           ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.WAIT0   ; Stuck at GND            ; connect:cnt0|state.TRANS                                                            ;
+;                            ; due to stuck port clock ;                                                                                     ;
+; connect:cnt0|state.WAIT1   ; Stuck at GND            ; connect:cnt0|state.RESULT                                                           ;
+;                            ; due to stuck port clock ;                                                                                     ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |test ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; sizein         ; 32    ; Signed Integer                              ;
+; sizew          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: database:db0 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; maxl           ; 5     ; Signed Integer                   ;
+; sizein         ; 32    ; Signed Integer                   ;
+; sizew          ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; maxl           ; 5     ; Signed Integer                   ;
+; sizein         ; 32    ; Signed Integer                   ;
+; sizew          ; 32    ; Signed Integer                   ;
+; sizeout        ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_3 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_4 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_5 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_6 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_7 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_8 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_9 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                 ;
+; sizew          ; 32    ; Signed Integer                                 ;
+; sizeout        ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_10 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_11 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_12 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_13 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_14 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_15 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_16 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_17 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_18 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_19 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_20 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_21 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_22 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_23 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_24 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_25 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_26 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_27 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_28 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: connect:cnt0|neuron32:n0_29 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; sizein         ; 32    ; Signed Integer                                  ;
+; sizew          ; 32    ; Signed Integer                                  ;
+; sizeout        ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "connect:cnt0"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; debug  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; debug1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prob0  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prob1  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prob2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prob3  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 50                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Apr 27 16:49:53 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nn -c nn
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file test.v
+    Info (12023): Found entity 1: test File: D:/Dropbox/csce614/nn/test.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file read.v
+    Info (12023): Found entity 1: read_wbin File: D:/Dropbox/csce614/nn/read.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file neuron.v
+    Info (12023): Found entity 1: neuron File: D:/Dropbox/csce614/nn/Neuron.v Line: 1
+    Info (12023): Found entity 2: neuron32 File: D:/Dropbox/csce614/nn/Neuron.v Line: 120
+Info (12021): Found 1 design units, including 1 entities, in source file database.v
+    Info (12023): Found entity 1: database File: D:/Dropbox/csce614/nn/database.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cont.v
+    Info (12023): Found entity 1: connect File: D:/Dropbox/csce614/nn/cont.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at database.v(22): Parameter Declaration in module "database" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/database.v Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at database.v(23): Parameter Declaration in module "database" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/database.v Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at database.v(24): Parameter Declaration in module "database" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/database.v Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at database.v(25): Parameter Declaration in module "database" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/database.v Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(95): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 95
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(96): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 96
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(97): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 97
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(98): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 98
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(99): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 99
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(100): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 100
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(101): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 101
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(102): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 102
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(103): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 103
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(104): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 104
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(105): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 105
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(106): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 106
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(107): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 107
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(108): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 108
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(109): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 109
+Warning (10222): Verilog HDL Parameter Declaration warning at cont.v(110): Parameter Declaration in module "connect" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/cont.v Line: 110
+Warning (10222): Verilog HDL Parameter Declaration warning at read.v(38): Parameter Declaration in module "read_wbin" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/read.v Line: 38
+Warning (10222): Verilog HDL Parameter Declaration warning at read.v(39): Parameter Declaration in module "read_wbin" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/read.v Line: 39
+Warning (10222): Verilog HDL Parameter Declaration warning at read.v(40): Parameter Declaration in module "read_wbin" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/read.v Line: 40
+Warning (10222): Verilog HDL Parameter Declaration warning at read.v(41): Parameter Declaration in module "read_wbin" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Dropbox/csce614/nn/read.v Line: 41
+Info (12127): Elaborating entity "test" for the top level hierarchy
+Warning (10755): Verilog HDL warning at test.v(76): assignments to clk create a combinational loop File: D:/Dropbox/csce614/nn/test.v Line: 76
+Warning (10230): Verilog HDL assignment warning at test.v(97): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/test.v Line: 97
+Warning (10230): Verilog HDL assignment warning at test.v(104): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/test.v Line: 104
+Warning (10230): Verilog HDL assignment warning at test.v(111): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/test.v Line: 111
+Warning (10230): Verilog HDL assignment warning at test.v(115): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/test.v Line: 115
+Warning (10034): Output port "out" at test.v(9) has no driver File: D:/Dropbox/csce614/nn/test.v Line: 9
+Info (12128): Elaborating entity "database" for hierarchy "database:db0" File: D:/Dropbox/csce614/nn/test.v Line: 42
+Info (12128): Elaborating entity "connect" for hierarchy "connect:cnt0" File: D:/Dropbox/csce614/nn/test.v Line: 50
+Warning (10230): Verilog HDL assignment warning at cont.v(166): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 166
+Warning (10230): Verilog HDL assignment warning at cont.v(184): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 184
+Warning (10230): Verilog HDL assignment warning at cont.v(190): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 190
+Warning (10230): Verilog HDL assignment warning at cont.v(198): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 198
+Warning (10230): Verilog HDL assignment warning at cont.v(199): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 199
+Warning (10230): Verilog HDL assignment warning at cont.v(215): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 215
+Warning (10230): Verilog HDL assignment warning at cont.v(224): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 224
+Warning (10230): Verilog HDL assignment warning at cont.v(225): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 225
+Warning (10230): Verilog HDL assignment warning at cont.v(231): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 231
+Warning (10230): Verilog HDL assignment warning at cont.v(262): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 262
+Warning (10230): Verilog HDL assignment warning at cont.v(280): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 280
+Warning (10230): Verilog HDL assignment warning at cont.v(285): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 285
+Warning (10230): Verilog HDL assignment warning at cont.v(304): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 304
+Warning (10230): Verilog HDL assignment warning at cont.v(317): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 317
+Warning (10230): Verilog HDL assignment warning at cont.v(327): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 327
+Warning (10230): Verilog HDL assignment warning at cont.v(341): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 341
+Warning (10230): Verilog HDL assignment warning at cont.v(358): truncated value with size 32 to match size of target (8) File: D:/Dropbox/csce614/nn/cont.v Line: 358
+Warning (10030): Net "w[1][4][5][15..0]" at cont.v(42) has no driver or initial value, using a default initial value '0' File: D:/Dropbox/csce614/nn/cont.v Line: 42
+Warning (10030): Net "w[1][2][3]" at cont.v(42) has no driver or initial value, using a default initial value '0' File: D:/Dropbox/csce614/nn/cont.v Line: 42
+Warning (10030): Net "b[1][6][7..0]" at cont.v(43) has no driver or initial value, using a default initial value '0' File: D:/Dropbox/csce614/nn/cont.v Line: 43
+Warning (10030): Net "b[1][4]" at cont.v(43) has no driver or initial value, using a default initial value '0' File: D:/Dropbox/csce614/nn/cont.v Line: 43
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "w" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "b" into its bus
+Info (12128): Elaborating entity "neuron32" for hierarchy "connect:cnt0|neuron32:n0_0" File: D:/Dropbox/csce614/nn/cont.v Line: 64
+Warning (10230): Verilog HDL assignment warning at Neuron.v(499): truncated value with size 32 to match size of target (31) File: D:/Dropbox/csce614/nn/Neuron.v Line: 499
+Warning (10240): Verilog HDL Always Construct warning at Neuron.v(265): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: D:/Dropbox/csce614/nn/Neuron.v Line: 265
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: D:/Dropbox/csce614/nn/test.v Line: 11
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: D:/Dropbox/csce614/nn/test.v Line: 11
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out[0]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[1]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[2]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[3]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[4]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[5]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[6]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[7]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[8]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[9]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[10]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[11]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[12]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[13]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[14]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[15]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[16]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[17]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[18]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[19]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[20]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[21]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[22]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[23]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[24]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[25]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[26]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[27]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[28]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[29]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[30]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+    Warning (13410): Pin "out[31]" is stuck at GND File: D:/Dropbox/csce614/nn/test.v Line: 9
+Info (17049): 27 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Dropbox/csce614/nn/output_files/nn.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: D:/Dropbox/csce614/nn/test.v Line: 4
+    Warning (15610): No output dependent on input pin "reset" File: D:/Dropbox/csce614/nn/test.v Line: 5
+    Warning (15610): No output dependent on input pin "in[0]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[1]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[2]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[3]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[4]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[5]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[6]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in[7]" File: D:/Dropbox/csce614/nn/test.v Line: 6
+    Warning (15610): No output dependent on input pin "in2[0]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[1]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[2]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[3]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[4]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[5]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[6]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+    Warning (15610): No output dependent on input pin "in2[7]" File: D:/Dropbox/csce614/nn/test.v Line: 7
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 5486 megabytes
+    Info: Processing ended: Sat Apr 27 16:52:12 2019
+    Info: Elapsed time: 00:02:19
+    Info: Total CPU time (on all processors): 00:02:32
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Dropbox/csce614/nn/output_files/nn.map.smsg.
+
+

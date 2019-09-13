@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{hwsurvey}
+Y.~Liao, ``Neural networks in hardware: A survey.''
+
+\bibitem{FPGAbook}
+A.~R~Omondi and J.~C~Rajapakse, {\em FPGA Implementations of Neural Networks}.
+\newblock 2006.
+
+\bibitem{hytnh17}
+T.~V. Huynh, ``Deep neural network accelerator based on fpga,'' in {\em 2017
+  4th NAFOSTED Conference on Information and Computer Science}, pp.~254--257,
+  2017.
+
+\bibitem{seok02}
+S.~B. Yun, Y.~J. Kim, S.~S. Dong, and C.~H. Lee, ``Hardware implementation of
+  neural network with expansible and reconfigurable architecture,'' in {\em
+  Proceedings of the 9th International Conference on Neural Information
+  Processing, 2002. ICONIP '02.}, pp.~970--975 vol.2, 2002.
+
+\bibitem{nn88}
+D.~{Psaltis}, A.~{Sideris}, and A.~A. {Yamamura}, ``A multilayered neural
+  network controller,'' {\em IEEE Control Systems Magazine}, pp.~17--21, 1988.
+
+\bibitem{nn89}
+``Theory of the backpropagation neural network,'' in {\em International 1989
+  Joint Conference on Neural Networks}, pp.~593--605 vol.1, 1989.
+
+\bibitem{nn91}
+D.~F. {Specht}, ``A general regression neural network,'' {\em IEEE Transactions
+  on Neural Networks}, pp.~568--576, 1991.
+
+\bibitem{convnet}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' in {\em Advances in Neural Information
+  Processing Systems 25}, pp.~1097--1105, 2012.
+
+\bibitem{gan}
+I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
+  A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' in {\em
+  Advances in Neural Information Processing Systems 27}, pp.~2672--2680, 2014.
+
+\bibitem{tpu}
+N.~P. {Jouppi}, C.~{Young}, N.~{Patil}, D.~{Patterson}, G.~{Agrawal},
+  R.~{Bajwa}, S.~{Bates}, S.~{Bhatia}, N.~{Boden}, A.~{Borchers}, R.~{Boyle},
+  P.~{Cantin}, C.~{Chao}, C.~{Clark}, J.~{Coriell}, M.~{Daley}, M.~{Dau},
+  J.~{Dean}, B.~{Gelb}, T.~V. {Ghaemmaghami}, R.~{Gottipati}, W.~{Gulland},
+  R.~{Hagmann}, C.~R. {Ho}, D.~{Hogberg}, J.~{Hu}, R.~{Hundt}, D.~{Hurt},
+  J.~{Ibarz}, A.~{Jaffey}, A.~{Jaworski}, A.~{Kaplan}, H.~{Khaitan},
+  D.~{Killebrew}, A.~{Koch}, N.~{Kumar}, S.~{Lacy}, J.~{Laudon}, J.~{Law},
+  D.~{Le}, C.~{Leary}, Z.~{Liu}, K.~{Lucke}, A.~{Lundin}, G.~{MacKean},
+  A.~{Maggiore}, M.~{Mahony}, K.~{Miller}, R.~{Nagarajan}, R.~{Narayanaswami},
+  R.~{Ni}, K.~{Nix}, T.~{Norrie}, M.~{Omernick}, N.~{Penukonda}, A.~{Phelps},
+  J.~{Ross}, M.~{Ross}, A.~{Salek}, E.~{Samadiani}, C.~{Severn}, G.~{Sizikov},
+  M.~{Snelham}, J.~{Souter}, D.~{Steinberg}, A.~{Swing}, M.~{Tan},
+  G.~{Thorson}, B.~{Tian}, H.~{Toma}, E.~{Tuttle}, V.~{Vasudevan}, R.~{Walter},
+  W.~{Wang}, E.~{Wilcox}, and D.~H. {Yoon}, ``In-datacenter performance
+  analysis of a tensor processing unit,'' in {\em 2017 ACM/IEEE 44th Annual
+  International Symposium on Computer Architecture (ISCA)}, pp.~1--12, 2017.
+
+\bibitem{tpu2}
+N.~{Jouppi}, C.~{Young}, N.~{Patil}, and D.~{Patterson}, ``Motivation for and
+  evaluation of the first tensor processing unit,'' {\em IEEE Micro},
+  pp.~10--19, 2018.
+
+\bibitem{spike}
+W.~Maas, ``Networks of spiking neurons: The third generation of neural network
+  models,'' {\em Trans. Soc. Comput. Simul. Int.}, pp.~1659--1671, 1997.
+
+\bibitem{linux}
+{Linux source code for DE1-SoC}.
+  \url{https://github.com/altera-opensource/linux-socfpga}.
+
+\end{thebibliography}

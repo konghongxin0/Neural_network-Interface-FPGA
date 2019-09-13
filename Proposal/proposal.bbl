@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{hwsurvey}
+Y.~Liao, ``Neural networks in hardware: A survey.''
+
+\bibitem{FPGAbook}
+A.~R~Omondi and J.~C~Rajapakse, {\em FPGA Implementations of Neural Networks}.
+\newblock 2006.
+
+\bibitem{hytnh17}
+T.~V. Huynh, ``Deep neural network accelerator based on fpga,'' in {\em 2017
+  4th NAFOSTED Conference on Information and Computer Science}, pp.~254--257,
+  2017.
+
+\bibitem{seok02}
+S.~B. Yun, Y.~J. Kim, S.~S. Dong, and C.~H. Lee, ``Hardware implementation of
+  neural network with expansible and reconfigurable architecture,'' in {\em
+  Proceedings of the 9th International Conference on Neural Information
+  Processing, 2002. ICONIP '02.}, pp.~970--975 vol.2, 2002.
+
+\end{thebibliography}

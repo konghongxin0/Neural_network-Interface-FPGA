@@ -1,0 +1,12 @@
+@INPROCEEDINGS{1198205, 
+author={Seok Bae Yun and Young Joo Kim and Sung Soo Dong and Chong Ho Lee}, 
+booktitle={Proceedings of the 9th International Conference on Neural Information Processing, 2002. ICONIP '02.}, 
+title={Hardware implementation of neural network with expansible and reconfigurable architecture}, 
+year={2002}, 
+volume={2}, 
+number={}, 
+pages={970-975 vol.2}, 
+keywords={neural net architecture;parallel architectures;pipeline processing;reconfigurable architectures;multilayer perceptrons;learning (artificial intelligence);digital neural network;reconfigurable neural network architecture;SIMD architecture;pipelining;parallelism;network topology;reconfigurability;multilayer perceptron;backpropagation;learning;expansible neural network architecture;Neural network hardware;Neural networks;Reconfigurable architectures;Computer architecture;Pipeline processing;Network topology;Registers;Usability;Field programmable gate arrays;Multilayer perceptrons}, 
+doi={10.1109/ICONIP.2002.1198205}, 
+ISSN={}, 
+month={Nov},}

@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Dropbox/csce614/nn/simulation/modelsim
+vconnect
+Z1 !s110 1556401991
+!i10b 1
+!s100 _i0_983??lEaVEl2Mk6RK3
+ID2Q[B6hh=L357a1boBM_82
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1556166985
+8D:/Dropbox/csce614/nn/cont.v
+FD:/Dropbox/csce614/nn/cont.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1556401991.000000
+!s107 D:/Dropbox/csce614/nn/cont.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Dropbox/csce614/nn|D:/Dropbox/csce614/nn/cont.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/Dropbox/csce614/nn
+Z7 tCvgOpt 0
+vdatabase
+R1
+!i10b 1
+!s100 KQ@j=i6@L8N<jHX2VBg4H0
+IM;2Wh3^YUHV_CQAQkdGPg1
+R2
+R0
+w1556161244
+8D:/Dropbox/csce614/nn/database.v
+FD:/Dropbox/csce614/nn/database.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Dropbox/csce614/nn/database.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Dropbox/csce614/nn|D:/Dropbox/csce614/nn/database.v|
+!i113 1
+R5
+R6
+R7
+vneuron
+R1
+!i10b 1
+!s100 WRhL_OVi9J<:01Y>2fd<20
+IhCM6S?a5N8=b0;lMgQ1650
+R2
+R0
+Z8 w1556160611
+Z9 8D:/Dropbox/csce614/nn/Neuron.v
+Z10 FD:/Dropbox/csce614/nn/Neuron.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 D:/Dropbox/csce614/nn/Neuron.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Dropbox/csce614/nn|D:/Dropbox/csce614/nn/Neuron.v|
+!i113 1
+R5
+R6
+R7
+vneuron32
+R1
+!i10b 1
+!s100 TV1d084kmg3e7TS;nZW7H2
+IFOFh:YWo`OclSoMZ[B]fn2
+R2
+R0
+R8
+R9
+R10
+L0 120
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+R7
+vtest
+R1
+!i10b 1
+!s100 [FzA[18lVUSF<BcjB]z@H1
+IA?k^3H]O=Z]FKeX]j9Q_N2
+R2
+R0
+w1556167327
+8D:/Dropbox/csce614/nn/test.v
+FD:/Dropbox/csce614/nn/test.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Dropbox/csce614/nn/test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Dropbox/csce614/nn|D:/Dropbox/csce614/nn/test.v|
+!i113 1
+R5
+R6
+R7

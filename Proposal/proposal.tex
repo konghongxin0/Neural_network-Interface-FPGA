@@ -1,0 +1,59 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{hhline}
+\graphicspath{ {figure/} }
+\usepackage[numbers]{natbib}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Proposal}
+
+\author{\IEEEauthorblockN{Hongxin Kong}
+\IEEEauthorblockA{\textit{Department of Electrical and Computer Engineering} \\
+\textit{Texas A\&M University}\\
+College Station, USA \\
+konghongxin911@tamu.edu}
+\and
+\IEEEauthorblockN{Lang Feng}
+\IEEEauthorblockA{\textit{Department of Electrical and Computer Engineering} \\
+\textit{Texas A\&M University}\\
+College Station, USA \\
+flwave@tamu.edu}
+}
+
+\maketitle
+
+\section{Background}
+
+Recent years, with high performance hardware and software emerging, machine learning approaches become more practical to implement. A typical area of machine learning, neural network, becomes a popular approach for doing various of machine learning tasks. With the demand of high performance and low overhead neural networks, sometimes software-based neural networks cannot satisfy the requirements, thus, many researches focus on implementing neural networks by hardware~\cite{hwsurvey}. 
+
+Field-programmable gate array (FPGA) is a prevalent platform for hardware implemetation. Neural networks which are based on FPGA are also proposed by many researchers~\cite{FPGAbook}. Some works like~\cite{hytnh17,seok02} proposed FPGA-based neural network implementations and have advantages over normal software-based implementations. However, there are still many spaces for improving current FPGA-based neural network architectures. We plan to improve the neural network architecture based on the work~\cite{hytnh17}.
+
+\section{Design Plan}
+
+For many existing hardware-based neural networks, a fixed circuit is used for a specific neural network architectures. This will damage the flexibility of the hardware circuits. For example, in \cite{hytnh17}, the weights of the neural network is hard-coded and cannot be changed. We plan to implement a general hardware architecture that can be used to do training and inference for any kinds of neural networks. That means, on different hardware platform, the only difference is the size of such architecture, which will affect the training or inference latency. When given the size of such architecture, any kinds of neural network tasks can be finished. Since different neural networks have different structures, weights, etc., a ROM/RAM will be used in our design, which is used by users to store their settings for the neural networks. We plan to implement the design on FPGA.
+
+\section{Expected Outcome}
+
+Our design is expected to work for any neural network sturctures. Users can input their expected neural network structures by inputing some data with specific format into ROM/RAM. The neural networks can then be trained by the training data, and users can use them later. The expected speed of our design is similar to work \cite{hytnh17}, but has higher flexibility than it.
+
+\bibliographystyle{ieeetr}
+ {\scriptsize \bibliography{reference}}
+
+\end{document}

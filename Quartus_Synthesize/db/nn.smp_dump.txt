@@ -1,0 +1,31 @@
+
+State Machine - |test|state
+Name state.00000011 state.00000010 state.00000001 state.00000000 
+state.00000000 0 0 0 0 
+state.00000001 0 0 1 1 
+state.00000010 0 1 0 1 
+state.00000011 1 0 0 1 
+
+State Machine - |test|connect:cnt0|state
+Name state.FINISH state.RESULT state.WAIT1 state.TRANS state.WAIT0 state.LOADB1 state.LOADB0 state.LOADB state.LOADW1 state.LOADW0 state.LOADW state.LOADIN1 state.LOADIN0 state.LOADIN state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.LOADIN 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.LOADIN0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.LOADIN1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.LOADW 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.LOADW0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.LOADW1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.LOADB 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.LOADB0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.LOADB1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.WAIT0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.TRANS 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RESULT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.FINISH 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |test|database:db0|state
+Name state.WAIT state.IDLE state.READ 
+state.IDLE 0 0 0 
+state.WAIT 1 1 0 
+state.READ 0 1 1 
